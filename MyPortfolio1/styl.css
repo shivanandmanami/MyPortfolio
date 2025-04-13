@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1f242d;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+
+}
+
+.navbar ul li a {
+    font-size: 18px;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.navbar ul li:hover a,
+.navbar ul li.active a {
+    color: #b74b4b;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: white;
+    opacity: 0;
+    animation: show-navbar 1.5s linear forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes show-navbar {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes show-home {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes show-home-info {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.home-info h1 {
+    font-size: 55px;
+}
+
+.home-info h2 {
+    display: inline-block;
+    font-size: 32px;
+    margin-top: -10px;
+    font-weight: 500;
+}
+
+.home-info h2 span {
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 1px #b74b4b;
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+    ;
+}
+
+@keyframes display-text {
+
+    25%,
+    100% {
+        display: none;
+    }
+}
+
+.home-info p {
+    margin: 10px 0 25px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.home-info .btn-sec {
+    display: flex;
+    align-items: start-end;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px 0;
+    bottom: 0;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #b74b4b;
+    border: 2px solid #b74b4b;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(183, 75, 75, .5);
+    color: #1f242d;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .5s;
+    width: 250px;
+    text-align: center;
+}
+
+
+.btn:hover {
+    background: transparent;
+    color: #b74b4b;
+    box-shadow: 0 0 10px rgba(183, 75, 75, .5);
+    border: 2px solid #b74b4b;
+    cursor: pointer;
+}
+
+.home-info .btn-sec .sec {
+    display: flex;
+    margin-left: 5px;
+}
+
+.home-info .btn-sec .sec a {
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid #b74b4b;
+    border-radius: 50%;
+    font-size: 20px;
+    margin: 0 8px;
+    color: white;
+    box-shadow: 0 0 5px #b74b4b;
+    transition: .5s;
+}
+
+.home-info .btn-sec .sec a:hover {
+    background: #1f242d;
+    color: #b74b4b;
+    box-shadow: -0.1px 0.2px 20px #b74b4b;
+    border: 2px solid #b74b4b;
+    cursor: pointer;
+}
+
+.home-img .img-box {
+    position: relative;
+    width: 32vw;
+    height: 32vw;
+
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.home-img .img-box::before,
+.home-img .img-box::after {
+    content: '';
+    position: absolute;
+    width: 620px;
+    height: 600px;
+    background: conic-gradient(transparent, transparent, transparent, #b74b4b);
+    transform: rotate(0deg);
+    animation: rotate 10s linear infinite;
+}
+
+.home-img .img-box::after {
+    animation-delay: -5s;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.home-img .img-box .img-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #1f242d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.home-img .img-box .img-item img {
+    position: absolute;
+    width: 85%;
+    display: block;
+    object-fit: cover;
+}
