@@ -26,6 +26,7 @@ a {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    background-color: #1f242d;
 
 }
 
@@ -242,4 +243,110 @@ a {
     width: 85%;
     display: block;
     object-fit: cover;
+}
+
+.Projects {
+    padding: 100px 9%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    opacity: 0;
+    animation: show-navbar 1.5s linear forwards;
+    animation-delay: 0.5s;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #1f242d;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(183, 75, 75, .5);
+    border: 2px solid #b74b4b;
+    border-radius: 20px;
+
+}
+
+.Projects h1 {
+    font-size: 50px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(183, 75, 75, .5);
+    padding: 10px 0;
+    border-radius: 20px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.Projects h1 span {
+    color: #b74b4b;
+    text-shadow: 0 0 20px rgba(183, 75, 75, .5);
+    font-weight: 700;
+    font-size: 60px;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 20px;
+
+}
+
+.Projects .project-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    box-shadow: 0 0 20px rgba(183, 75, 75, .5);
+    border: 2px solid #b74b4b;
+    border-radius: 20px;
+    background-color: #1f242d;
+    color: white;
+    opacity: 0;
+    animation: show-navbar 1.5s linear forwards;
+}
+
+.img-box {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #1f242d;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imgp {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background-color: #1f242d;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    padding: 20px;
+    border-radius: 20px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
